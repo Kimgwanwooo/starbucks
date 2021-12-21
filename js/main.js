@@ -182,3 +182,14 @@ spyEls.forEach(function(spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
+
+gsap.to('#to-top', .2, {
+  x: 100 
+});
+
+const toTopEl = document.querySelector('#to-top');
+toTopEl.addEventListener('click', function() {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
